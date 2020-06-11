@@ -4,7 +4,11 @@ import React from 'react';
 class Latest extends React.Component {
 
   render(){
-    return ()
+    return (
+      <div>
+        Show latest
+      </div>
+    )
   }
 }
 
