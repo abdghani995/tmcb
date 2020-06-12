@@ -69095,3 +69095,24 @@ html {
 
 
 /*-------------------//Changes-------------------------------*/
+
+@media only screen and(max-width:992px){
+    .mobile_view{
+        display: initial !important;
+    }
+    .desktop_view{
+        display: none !important;
+    }
+}
+@media only screen and(min-width:992px){
+    .mobile_view{
+        display: none !important;
+    }
+    .desktop_view{
+        display: initial !important;
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 
 import Header from './components/shared/Header'
 import Navbar from './components/shared/Navbar'
 
 import Latest from './components/movies/Latest';
 import Popular from './components/movies/Popular';
-import MovieDetails from './components/movies/MovieDetails';
+import MovieDetails from './components/movies/MovieDetails/MovieDetails';
 
 
 function App() {
@@ -14,22 +14,27 @@ function App() {
     <div className="container">
     <Router>
       <Header />
-      <Navbar />
+      {/* <Navbar /> */}
 
-        <Switch>
-          <Route exact path="/movie/latest" activeClassName='active'>
-            <Latest />
-          </Route>
-          
-          <Route exact path="/movie/popular">
-            <Popular />
-          </Route>
+      <Switch>
 
-          <Route exact path="/movie/:movie_id">
-            <MovieDetails />
-          </Route>
+        <Route exact path="/">
+          <Redirect to="/movie" />
+        </Route>
 
-        </Switch>
+        <Route exact path="/movie/latest" activeClassName='active'>
+          <Latest />
+        </Route>
+        
+        <Route exact path="/movie">
+          <Popular />
+        </Route>
+
+        <Route exact path="/movie/:movie_id">
+          <MovieDetails />
+        </Route>
+
+      </Switch>
     </Router>
 
     </div>

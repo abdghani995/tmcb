@@ -18,7 +18,7 @@ class Navbar extends React.Component {
               <div className="sub-item">
                 <ul>
                   <li>
-                    <Link to="/movie/latest" activeClassName="active">Latest</Link>
+                    <Link to="/movie/latest">Latest</Link>
                   </li>
                   <li>
                     <Link to="/movie/popular">Popular</Link>

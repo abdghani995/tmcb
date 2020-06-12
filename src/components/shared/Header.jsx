@@ -7,11 +7,12 @@ class Header extends React.Component {
     return (
       <div className="slim-header">
         <div className="container">
-            <div className="slim-header-left">
-                <h2 className="slim-logo"><a href="index.html">MOVIZ<span>.</span></a></h2>
-
+            <div className="text-center">
+                <h2 className="slim-logo">
+                  <a href="/">MOVIZ<span>.</span></a>
+                </h2>
             </div>
-            <div className="slim-header-right">
+            {/* <div className="slim-header-right">
               
                 <div className="dropdown dropdown-c">
                     <a href="#" className="logged-user" data-toggle="dropdown">
@@ -29,7 +30,7 @@ class Header extends React.Component {
                         </nav>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
       </div>
     )
